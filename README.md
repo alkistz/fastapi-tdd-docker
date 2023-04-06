@@ -1,13 +1,6 @@
-# Documentation
+# Test-Driven Development with FastAPI and Docker
 
-## To build all the images
+![Continuous Integration and Delivery](https://github.com/alkistz/fastapi-tdd-docker/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main)
 
-```bash
-docker-compose up -d --build
-```
 
-## To access the db
-
-```bash
-docker-compose exec web-db psql -U postgres
-```
+Some change
