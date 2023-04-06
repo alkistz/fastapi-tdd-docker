@@ -47,7 +47,9 @@ def test_read_summary_incorrect_id(test_app_with_db):
 
 
 def test_read_all_summaries(test_app_with_db):
-    response = test_app_with_db.post("/summaries/", content=json.dumps({"url": "https://foo.bar"}))
+    response = test_app_with_db.post(
+        "/summaries/", content=json.dumps({"url": "https://foo.bar"})
+    )
     summary_id = response.json()["id"]
 
     response = test_app_with_db.get("/summaries/")
@@ -55,4 +57,3 @@ def test_read_all_summaries(test_app_with_db):
 
     response_list = response.json()
     assert len(list(filter(lambda d: d["id"] == summary_id, response_list))) == 1
-    
